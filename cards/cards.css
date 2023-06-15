@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(37, 37, 37);
+    flex-wrap: wrap;
+}
+/* !!!!!!!!!!!!!!! CARD DOS PERSONAGENS !!!!!!!!!!!!!!! */
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.container .card{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    transition: .5s;
+    justify-content: flex-start;
+    align-items: center;
+    
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.container .card:hover{
+    background: rgba(255, 255, 255, 0.38);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 3px solid rgba(255, 255, 255, 1);
+}
+
+.container .card img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 400px;
+    transition: 1s;
+}
+.container .card:hover img{
+    left: 72%;
+    height: 430px;
+    
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!!!!!!!!!!!!!!!! CARD DAS ARMAS !!!!!!!!!!!!!!!!!!!!!! */
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 500px 0;
+}
+.content{
+    width: 20%;
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.content:hover{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.216), 0 3px 6px rgba(0, 0, 0, 0.23j);
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+@media (max-width: 991px) {
+    .container .card{
+        width: 60%;
+        max-width: 600px;
+        align-items: flex-start;
+
+    }
+    .container .card:hover{
+        height: 390px;
+    }
+    .container .card:hover img{
+        left: 50%;
+        height: 350px;
+    }
+}
+
+@media (max-width: 767px){
+    .container{
+        flex-direction: column;
+        margin-top: 5%;
+    }
+    .container .card{
+        margin: 40px 20px;
+    }
+}
+@media (max-width: 420px){
+    .container .card:hover img{
+        height: 300px;
+    }
+}
